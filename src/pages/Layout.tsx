@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 export default function Layout() {
   return (
     <>
-      <Navigation currentPage="" onNavigate={() => {}} />
+      <Navigation />
       <main className="pt-16">
         <Outlet />
       </main>

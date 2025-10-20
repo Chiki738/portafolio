@@ -1,15 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Home, User, FolderGit2, Award, Github } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import perfilAnimado from "../assets/perfilAnimado.jpg";
 
-interface NavigationProps {
-  currentPage: string;
-  onNavigate: (page: string) => void;
-}
-
-export default function Navigation({ currentPage }: NavigationProps) {
+export default function Navigation() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -82,24 +78,30 @@ export default function Navigation({ currentPage }: NavigationProps) {
             <span className="text-2xl">Portafolio</span>
           </div>
 
-          {/* Menú desktop */}
+          {/* ✅ Menú desktop */}
           <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavigate(item)}
-                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer ${
-                  currentPage === item.id && !item.external
-                    ? "text-yellow-600 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-900/20"
-                    : "text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400"
-                }`}>
-                {item.icon}
-                {item.label}
-              </button>
-            ))}
+            {navItems.map((item) => {
+              const isActive =
+                location.pathname === item.id ||
+                (item.id !== "/" && location.pathname.startsWith(item.id));
+
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavigate(item)}
+                  className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer ${
+                    isActive && !item.external
+                      ? "text-yellow-600 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-900/20"
+                      : "text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400"
+                  }`}>
+                  {item.icon}
+                  {item.label}
+                </button>
+              );
+            })}
           </div>
 
-          {/* Botón móvil */}
+          {/* ✅ Botón móvil */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 cursor-pointer">
@@ -107,22 +109,28 @@ export default function Navigation({ currentPage }: NavigationProps) {
           </button>
         </div>
 
-        {/* Menú móvil */}
+        {/* ✅ Menú móvil */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-700">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavigate(item)}
-                className={`flex items-center gap-2 w-full text-left px-3 py-2 rounded-md text-base font-medium transition cursor-pointer ${
-                  currentPage === item.id && !item.external
-                    ? "text-yellow-600 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-900/20"
-                    : "text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400"
-                }`}>
-                {item.icon}
-                {item.label}
-              </button>
-            ))}
+            {navItems.map((item) => {
+              const isActive =
+                location.pathname === item.id ||
+                (item.id !== "/" && location.pathname.startsWith(item.id));
+
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavigate(item)}
+                  className={`flex items-center gap-2 w-full text-left px-3 py-2 rounded-md text-base font-medium transition cursor-pointer ${
+                    isActive && !item.external
+                      ? "text-yellow-600 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-900/20"
+                      : "text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400"
+                  }`}>
+                  {item.icon}
+                  {item.label}
+                </button>
+              );
+            })}
           </div>
         )}
       </div>
