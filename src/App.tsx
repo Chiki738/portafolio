@@ -4,6 +4,7 @@ import { HelmetProvider } from "react-helmet-async";
 
 import Layout from "./pages/Layout";
 import Inicio from "./pages/Inicio";
+import SobreMi from "./pages/SobreMi";
 import Proyectos from "./pages/Proyectos";
 import Certificados from "./pages/Certificados";
 import Dialog from "./components/Dialog";
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Inicio />} />
+            <Route path="sobreMi" element={<SobreMi />} />
             <Route path="proyectos" element={<Proyectos />} />
             <Route path="certificados" element={<Certificados />} />
           </Route>
