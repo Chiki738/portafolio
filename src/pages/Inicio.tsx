@@ -27,11 +27,11 @@ export default function Inicio() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-gray-900 dark:to-gray-800 pt-24 pb-16">
+    <div className="min-h-screen from-yellow-50 to-yellow-100 dark:from-gray-900 dark:to-gray-800 pt-24 pb-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
           {/* ✅ Imagen de perfil */}
-          <div className="flex-shrink-0 animate-fade-in">
+          <div className="animate-fade-in">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-yellow-400 dark:border-yellow-500 shadow-2xl">
                 <img
@@ -68,7 +68,7 @@ export default function Inicio() {
               información sobre mi experiencia profesional.
             </p>
 
-            {/* ✅ Botones sociales grandes */}
+            {/* ✅ Botones sociales con ancho uniforme */}
             <div className="flex flex-wrap gap-6 justify-center md:justify-start pt-6">
               {socialButtons.map((button) => (
                 <a
@@ -76,7 +76,7 @@ export default function Inicio() {
                   href={button.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${button.color} cursor-pointer text-white px-8 py-4 rounded-xl shadow-lg transition-all transform hover:scale-110 flex items-center gap-3 font-semibold text-lg`}>
+                  className={`${button.color} cursor-pointer text-white w-44 text-center px-8 py-4 rounded-xl shadow-lg transition-all transform hover:scale-110 flex items-center justify-center gap-3 font-semibold text-lg`}>
                   <i className={`${button.icon} text-2xl`}></i>
                   <span>{button.name}</span>
                 </a>
