@@ -1,69 +1,53 @@
 export default function Certificados() {
   const certificates = [
     {
-      title: "Certificación en Desarrollo Web Full Stack",
+      title: "Certificación en Excel Intermedio",
       description:
-        "Curso completo de desarrollo web moderno con React, Node.js y bases de datos.",
-      institution: "Platzi",
+        "Manejo de funciones, tablas dinámicas y análisis de datos con herramientas avanzadas de Excel.",
+      institution: "Universidad Tecnológica del Perú (UTP)",
+      date: "2023",
+      icon: "fa-solid fa-file-excel",
+      driveUrl:
+        "https://drive.google.com/file/d/1cC9kQ2RNVvNXqOfg9OkHUGOBg0d2Szeo/view?usp=sharing",
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      title: "Certificación en Git y Control de Versiones",
+      description:
+        "Aprendizaje del control de versiones, ramas, fusión de cambios y colaboración en proyectos con GitHub.",
+      institution: "Alura Latam",
       date: "2024",
-      icon: "fa-solid fa-award",
-      driveUrl: "https://drive.google.com/file/d/tu-certificado-1",
+      icon: "fa-brands fa-git-alt",
+      driveUrl:
+        "https://drive.google.com/file/d/1unyyg-HKZUFiTlct4U6xGZle9wNwV9xt/view?usp=sharing",
+      color: "from-gray-700 to-gray-900",
+    },
+    {
+      title: "Certificación en Inglés A2 (MCER)",
+      description:
+        "Nivel A2 según el Marco Común Europeo de Referencia (MCER): comprensión y comunicación básica en inglés.",
+      institution: "Universidad Tecnológica del Perú (UTP)",
+      date: "2023",
+      icon: "fa-solid fa-language",
+      driveUrl:
+        "https://drive.google.com/file/d/1UyZqk7mP-NUtFqdK7wXv0ZlcIZtg8_VC/view?usp=sharing",
       color: "from-blue-500 to-cyan-500",
     },
     {
-      title: "Java Programming Masterclass",
+      title: "Certificación en Soporte de TI (Hardware)",
       description:
-        "Dominio de Java, POO, estructuras de datos y desarrollo de aplicaciones empresariales.",
-      institution: "Udemy",
+        "Mantenimiento, diagnóstico y reparación de equipos de cómputo, aplicando buenas prácticas técnicas.",
+      institution: "Universidad Tecnológica del Perú (UTP)",
       date: "2023",
-      icon: "fa-solid fa-certificate",
-      driveUrl: "https://drive.google.com/file/d/tu-certificado-2",
-      color: "from-red-500 to-orange-500",
-    },
-    {
-      title: "SQL Server Database Administration",
-      description:
-        "Gestión avanzada de bases de datos, optimización de consultas y seguridad.",
-      institution: "Microsoft Learn",
-      date: "2023",
-      icon: "fa-solid fa-database",
-      driveUrl: "https://drive.google.com/file/d/tu-certificado-3",
-      color: "from-green-500 to-teal-500",
-    },
-    {
-      title: "Power BI Data Analytics",
-      description:
-        "Análisis y visualización de datos, creación de dashboards interactivos.",
-      institution: "DataCamp",
-      date: "2024",
-      icon: "fa-solid fa-chart-pie",
-      driveUrl: "https://drive.google.com/file/d/tu-certificado-4",
+      icon: "fa-solid fa-computer",
+      driveUrl:
+        "https://drive.google.com/file/d/13ycyAOV7maa_AugPWhskduKYqo4B5MAq/view?usp=sharing",
       color: "from-yellow-500 to-amber-500",
-    },
-    {
-      title: "Spring Framework Professional",
-      description:
-        "Desarrollo de aplicaciones empresariales con Spring Boot, Spring Security y Spring Data.",
-      institution: "Baeldung",
-      date: "2023",
-      icon: "fa-solid fa-leaf",
-      driveUrl: "https://drive.google.com/file/d/tu-certificado-5",
-      color: "from-green-600 to-emerald-600",
-    },
-    {
-      title: "Git & GitHub: Version Control",
-      description:
-        "Control de versiones, colaboración en equipo y mejores prácticas de desarrollo.",
-      institution: "GitHub Learning Lab",
-      date: "2023",
-      icon: "fa-brands fa-git-alt",
-      driveUrl: "https://drive.google.com/file/d/tu-certificado-6",
-      color: "from-gray-700 to-gray-900",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-gray-900 dark:to-gray-800 pt-24 pb-16">
+    <div className="min-h-screen from-yellow-50 to-yellow-100 dark:from-gray-900 dark:to-gray-800 pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
@@ -74,7 +58,7 @@ export default function Certificados() {
           </h1>
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
             Certificaciones que validan mi formación continua y especialización
-            en diferentes tecnologías
+            en diferentes áreas tecnológicas y profesionales.
           </p>
         </div>
 
@@ -126,9 +110,9 @@ export default function Certificados() {
               Aprendizaje Continuo
             </h2>
             <p className="text-gray-700 dark:text-gray-300">
-              Mi compromiso con el aprendizaje continuo me impulsa a mantenerme
-              actualizado con las últimas tecnologías y mejores prácticas en el
-              desarrollo de software.
+              Mi compromiso con el aprendizaje constante me impulsa a seguir
+              mejorando mis habilidades técnicas y profesionales para ofrecer
+              soluciones más completas y eficientes.
             </p>
           </div>
         </div>

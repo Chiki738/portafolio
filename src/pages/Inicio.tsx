@@ -1,8 +1,17 @@
 import Perfil from "../assets/perfil.jpg";
 import "../style/inicio-style.css";
 
+interface SocialButton {
+  name: string;
+  icon: string;
+  url: string;
+  color: string;
+  textColor?: string;
+  target?: string;
+}
+
 export default function Inicio() {
-  const socialButtons = [
+  const socialButtons: SocialButton[] = [
     {
       name: "Email",
       icon: "fa-solid fa-envelope",
@@ -24,13 +33,37 @@ export default function Inicio() {
       color:
         "bg-blue-600 hover:bg-blue-700 hover:shadow-[0_0_20px_rgba(37,99,235,0.6)]",
     },
+    {
+      name: "Mi CV",
+      icon: "fa-solid fa-file-pdf",
+      url: "https://drive.google.com/file/d/1VEwgapFRvwGZxI2gUyN4ShlHmDPGmpAF/view?usp=sharing",
+      color:
+        "bg-yellow-500 hover:bg-yellow-600 hover:shadow-[0_0_20px_rgba(234,179,8,0.6)]",
+      textColor: "text-gray-800 dark:text-gray-800",
+      target: "_blank",
+    },
   ];
+
+  const row1Buttons = [socialButtons[2], socialButtons[3]]; // LinkedIn, CV
+  const row2Buttons = [socialButtons[0], socialButtons[1]]; // Email, GitHub
+
+  const buttonBaseClasses = (button: SocialButton) =>
+    `${button.color} ${
+      button.textColor || "text-white"
+    } cursor-pointer w-44 text-center px-4 py-4 rounded-xl shadow-lg transition-all transform hover:scale-105 flex items-center justify-center gap-3 font-semibold text-lg`;
+
+  const renderButtonContent = (button: SocialButton) => (
+    <>
+      <i className={`${button.icon} text-2xl`}></i>
+      <span>{button.name}</span>
+    </>
+  );
 
   return (
     <div className="min-h-screen from-yellow-50 to-yellow-100 dark:from-gray-900 dark:to-gray-800 pt-24 pb-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
-          {/* ✅ Imagen de perfil */}
+          {/* Imagen de perfil */}
           <div className="animate-fade-in">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-yellow-400 dark:border-yellow-500 shadow-2xl">
@@ -46,7 +79,7 @@ export default function Inicio() {
             </div>
           </div>
 
-          {/* ✅ Texto y botones */}
+          {/* Texto y botones */}
           <div className="flex-1 text-center md:text-left space-y-6 animate-slide-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white">
               ¡Hola! Soy{" "}
@@ -68,19 +101,33 @@ export default function Inicio() {
               información sobre mi experiencia profesional.
             </p>
 
-            {/* ✅ Botones sociales con ancho uniforme */}
-            <div className="flex flex-wrap gap-6 justify-center md:justify-start pt-6">
-              {socialButtons.map((button) => (
-                <a
-                  key={button.name}
-                  href={button.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${button.color} cursor-pointer text-white w-44 text-center px-8 py-4 rounded-xl shadow-lg transition-all transform hover:scale-110 flex items-center justify-center gap-3 font-semibold text-lg`}>
-                  <i className={`${button.icon} text-2xl`}></i>
-                  <span>{button.name}</span>
-                </a>
-              ))}
+            {/* Botones 2x2 */}
+            <div className="pt-6 max-w-md mx-auto md:mx-0">
+              <div className="flex justify-between w-full mb-4">
+                {row1Buttons.map((button) => (
+                  <a
+                    key={button.name}
+                    href={button.url}
+                    target={button.target || "_blank"}
+                    rel="noopener noreferrer"
+                    className={buttonBaseClasses(button)}>
+                    {renderButtonContent(button)}
+                  </a>
+                ))}
+              </div>
+
+              <div className="flex justify-between w-full">
+                {row2Buttons.map((button) => (
+                  <a
+                    key={button.name}
+                    href={button.url}
+                    target={button.target || "_blank"}
+                    rel="noopener noreferrer"
+                    className={buttonBaseClasses(button)}>
+                    {renderButtonContent(button)}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>

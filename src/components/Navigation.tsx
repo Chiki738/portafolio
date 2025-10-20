@@ -1,7 +1,17 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Home, User, FolderGit2, Award, Github } from "lucide-react";
+import {
+  Menu,
+  X,
+  Home,
+  User,
+  FolderGit2,
+  Award,
+  Github,
+  FileText,
+} from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import perfilAnimado from "../assets/perfilAnimado.jpg";
+import "../style/navigation-style.css";
 
 export default function Navigation() {
   const navigate = useNavigate();
@@ -47,6 +57,12 @@ export default function Navigation() {
       icon: <Github size={20} />,
       external: true,
     },
+    {
+      id: "https://drive.google.com/file/d/1VEwgapFRvwGZxI2gUyN4ShlHmDPGmpAF/view?usp=sharing",
+      label: "Mi CV",
+      icon: <FileText size={20} />,
+      external: true,
+    },
   ];
 
   const handleNavigate = (item: (typeof navItems)[number]) => {
@@ -66,7 +82,7 @@ export default function Navigation() {
       }`}>
       <div className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-[0_4px_20px_rgba(255,255,255,0.15)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)] border-b border-white/20 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
-          {/* ✅ Logo + título */}
+          {/* ✅ Logo */}
           <div
             onClick={() => handleNavigate(navItems[0])}
             className="flex items-center gap-3 text-2xl font-bold text-gray-800 dark:text-white hover:text-yellow-600 dark:hover:text-yellow-400 transition cursor-pointer">
@@ -78,8 +94,8 @@ export default function Navigation() {
             <span className="text-2xl">Portafolio</span>
           </div>
 
-          {/* ✅ Menú desktop */}
-          <div className="hidden md:flex space-x-8">
+          {/* ✅ Menú Desktop (>995px) */}
+          <div className="hidden custom-lg:flex space-x-8">
             {navItems.map((item) => {
               const isActive =
                 location.pathname === item.id ||
@@ -101,17 +117,17 @@ export default function Navigation() {
             })}
           </div>
 
-          {/* ✅ Botón móvil */}
+          {/* ✅ Botón móvil (≤995px) */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 cursor-pointer">
+            className="custom-lg:hidden text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-400 cursor-pointer">
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* ✅ Menú móvil */}
+        {/* ✅ Menú móvil (≤995px) */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-700">
+          <div className="custom-lg:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-700">
             {navItems.map((item) => {
               const isActive =
                 location.pathname === item.id ||
