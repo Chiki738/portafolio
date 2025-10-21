@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# 🌟 Portafolio - Carlos Alzamora (Chiki)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido a mi portafolio personal, desarrollado con **HTML**, **CSS**, **TypeScript** y **TailwindCSS**.  
+Este proyecto representa mi enfoque profesional, técnico y creativo, mostrando mi experiencia, habilidades y compromiso con la mejora continua.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 👨‍💻 Sobre mí
 
-## React Compiler
+Soy un profesional **proactivo y adaptable**, orientado a **resultados y mejora continua**.  
+Cuento con experiencia en **instalación, configuración y mantenimiento** de equipos, redes y software, optimizando el rendimiento y la productividad.  
+Me destaco por trabajar bajo presión, **priorizar tareas** y **adaptarme rápidamente** a nuevos entornos, aportando siempre **soluciones eficientes, seguras y de calidad**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> 💬 _"Tú tranquilo, yo nervioso."_
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Tecnologías Utilizadas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **HTML5**
+- **CSS3**
+- **TypeScript**
+- **TailwindCSS**
+- **Git / GitHub**
+- **Vercel**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 💼 Proyecto Destacado
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🌐 **Portafolio Personal**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Un sitio web moderno y responsivo creado para mostrar mi perfil profesional, habilidades y experiencia en desarrollo frontend.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**Características principales:**
+
+- Diseño limpio, moderno y adaptable a cualquier dispositivo.
+- Secciones de presentación, habilidades y contacto.
+- Uso de **TailwindCSS** para un diseño ágil y optimizado.
+- Despliegue automático con **Vercel** y control de versiones en **GitHub**.
+
+🔗 **Repositorio:** [https://github.com/Chiki738/portafolio](https://github.com/Chiki738/portafolio)  
+🌍 **Sitio en línea:** [https://portafolio-chiki.vercel.app](https://portafolio-chiki.vercel.app)
+
+---
+
+## ⚙️ Instalación y Ejecución
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/Chiki738/portafolio.git
+
+# Entrar al directorio
+cd portafolio
+
+# Instalar dependencias
+npm install
+
+# Ejecutar en modo desarrollo
+npm run dev
+Luego abre http://localhost:5173 en tu navegador.
+
+📄 Licencia
+Este proyecto está bajo la licencia MIT.
+Eres libre de usar y modificar el código con fines educativos o personales, otorgando crédito al autor original.
+
+✨ Autor
+👤 Carlos Alzamora (Chiki)
+📧 carlosalzamorah@gmail.com
+🔗 LinkedIn
+💻 GitHub
 ```
