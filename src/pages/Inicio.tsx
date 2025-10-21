@@ -44,13 +44,13 @@ export default function Inicio() {
     },
   ];
 
-  const row1Buttons = [socialButtons[2], socialButtons[3]]; // LinkedIn, CV
+  const row1Buttons = [socialButtons[2], socialButtons[3]]; // LinkedIn, Mi CV
   const row2Buttons = [socialButtons[0], socialButtons[1]]; // Email, GitHub
 
   const buttonBaseClasses = (button: SocialButton) =>
     `${button.color} ${
       button.textColor || "text-white"
-    } cursor-pointer w-44 text-center px-4 py-4 rounded-xl shadow-lg transition-all transform hover:scale-105 flex items-center justify-center gap-3 font-semibold text-lg`;
+    } cursor-pointer w-full md:w-44 text-center px-4 py-4 rounded-xl shadow-lg transition-all transform hover:scale-105 flex items-center justify-center gap-3 font-semibold text-lg`;
 
   const renderButtonContent = (button: SocialButton) => (
     <>
@@ -101,9 +101,9 @@ export default function Inicio() {
               información sobre mi experiencia profesional.
             </p>
 
-            {/* Botones 2x2 */}
+            {/* Botones Responsivos */}
             <div className="pt-6 max-w-md mx-auto md:mx-0">
-              <div className="flex justify-between w-full mb-4">
+              <div className="flex flex-col md:flex-row justify-between w-full mb-4 gap-4">
                 {row1Buttons.map((button) => (
                   <a
                     key={button.name}
@@ -115,8 +115,7 @@ export default function Inicio() {
                   </a>
                 ))}
               </div>
-
-              <div className="flex justify-between w-full">
+              <div className="flex flex-col md:flex-row justify-between w-full gap-4">
                 {row2Buttons.map((button) => (
                   <a
                     key={button.name}
