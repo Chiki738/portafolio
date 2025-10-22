@@ -58,7 +58,7 @@ export default function Navigation() {
       external: true,
     },
     {
-      id: "https://drive.google.com/file/d/1VEwgapFRvwGZxI2gUyN4ShlHmDPGmpAF/view?usp=sharing",
+      id: "https://drive.google.com/file/d/1PjvKJRrzq0GJrM2c7pLGxUgkA1X_RCFv/view?usp=sharing",
       label: "Mi CV",
       icon: <FileText size={20} />,
       external: true,
