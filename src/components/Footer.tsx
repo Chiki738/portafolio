@@ -5,17 +5,17 @@ export default function Footer() {
     {
       name: "GitHub",
       icon: "fa-brands fa-github",
-      url: "https://github.com/tu-usuario",
+      url: "https://github.com/Chiki738",
     },
     {
       name: "LinkedIn",
       icon: "fa-brands fa-linkedin",
-      url: "https://linkedin.com/in/tu-perfil",
+      url: "https://www.linkedin.com/in/carlos-alzamora-chiki/",
     },
     {
       name: "Email",
       icon: "fa-solid fa-envelope",
-      url: "mailto:tu-email@ejemplo.com",
+      url: "mailto:carlosalzamorah@gmail.com",
     },
   ];
 
@@ -31,7 +31,8 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-yellow-400 transition-colors transform hover:scale-110"
-                aria-label={link.name}>
+                aria-label={link.name}
+              >
                 <i className={`${link.icon} text-2xl`}></i>
               </a>
             ))}
