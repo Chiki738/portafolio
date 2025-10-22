@@ -36,7 +36,7 @@ export default function Inicio() {
     {
       name: "Mi CV",
       icon: "fa-solid fa-file-pdf",
-      url: "https://drive.google.com/file/d/1VEwgapFRvwGZxI2gUyN4ShlHmDPGmpAF/view?usp=sharing",
+      url: "https://drive.google.com/file/d/1PjvKJRrzq0GJrM2c7pLGxUgkA1X_RCFv/view?usp=sharing",
       color:
         "bg-yellow-500 hover:bg-yellow-600 hover:shadow-[0_0_20px_rgba(234,179,8,0.6)]",
       textColor: "text-gray-800 dark:text-gray-800",
