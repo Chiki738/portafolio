@@ -1,154 +1,178 @@
+import {
+  Github,
+  ShoppingCart,
+  Lock,
+  Film,
+  Settings,
+  ExternalLink,
+  FolderGit2,
+} from "lucide-react";
+
 export default function Proyectos() {
   const projects = [
     {
       title: "Portafolio Personal",
       description:
-        "Portafolio de @Chiki que muestra sus logros, habilidades y proyectos profesionales.",
+        "Portafolio profesional diseñado para mostrar trayectoria, habilidades técnicas y proyectos destacados con una experiencia de usuario fluida.",
       technologies: [
-        "HTML",
-        "CSS",
+        "React",
         "TypeScript",
         "TailwindCSS",
+        "Framer Motion",
         "Vercel",
-        "Git",
-        "GitHub",
       ],
-      icon: "fa-solid fa-user",
+      icon: <FolderGit2 size={32} />,
       repoUrl: "https://github.com/Chiki738/portafolio",
-      color: "from-yellow-500 to-amber-500",
+      color: "from-yellow-500 to-amber-600",
+      shadow: "shadow-yellow-500/20",
+      // Sin extraRepo -> Mostrará "Ver Repositorio"
     },
     {
       title: "E-commerce Marbellin",
       description:
-        "Plataforma e-commerce para la venta de ropa interior, optimizando la gestión de productos y procesos de compra.",
-      technologies: [
-        "HTML",
-        "CSS",
-        "Bootstrap",
-        "Supabase",
-        "PHP",
-        "Laravel",
-        "Git",
-        "GitHub",
-      ],
-      icon: "fa-solid fa-cart-shopping",
+        "Solución integral de comercio electrónico para gestión de inventario, carritos de compra y procesamiento de pedidos de ropa interior.",
+      technologies: ["PHP", "Laravel", "Bootstrap", "MySQL", "Supabase"],
+      icon: <ShoppingCart size={32} />,
       repoUrl: "https://github.com/Chiki738/ecommerce-marbellin",
-      color: "from-pink-500 to-rose-500",
+      color: "from-pink-500 to-rose-600",
+      shadow: "shadow-pink-500/20",
+      // Sin extraRepo -> Mostrará "Ver Repositorio"
     },
     {
       title: "Challenge Encriptador",
       description:
-        "Aplicación web que permite encriptar y desencriptar mensajes de texto de manera sencilla.",
-      technologies: ["HTML", "CSS", "JavaScript", "Vercel"],
-      icon: "fa-solid fa-lock",
+        "Herramienta lógica para encriptación y desencriptación de mensajes basada en reglas de sustitución, con una interfaz limpia y responsive.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "DOM Manipulation"],
+      icon: <Lock size={32} />,
       repoUrl: "https://github.com/Chiki738/challenge-encriptador",
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-500 to-cyan-600",
+      shadow: "shadow-blue-500/20",
+      // Sin extraRepo -> Mostrará "Ver Repositorio"
     },
     {
-      title: "CineFlix (Front & Back)",
+      title: "CineFlix (Full Stack)",
       description:
-        "Plataforma web para la gestión de películas y series. Desarrollé el frontend completo y colaboré en el backend.",
+        "Plataforma de streaming. Desarrollé el Frontend en React consumiendo una API RESTful Java/Spring Boot en la que colaboré activamente.",
       technologies: [
         "React",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Vercel",
-        "Git",
-        "GitHub",
         "Java",
         "Spring Boot",
+        "MongoDB",
         "Docker",
-        "MongoDB Atlas",
+        "JWT",
       ],
-      icon: "fa-solid fa-film",
+      icon: <Film size={32} />,
       repoUrl: "https://github.com/Chiki738/cineflix",
-      extraRepo: "https://github.com/cj-laos/CinexFlix",
-      color: "from-indigo-500 to-purple-500",
+      extraRepo: "https://github.com/cj-laos/CinexFlix", // Tiene extraRepo -> Divide en Front/Back
+      color: "from-indigo-500 to-purple-600",
+      shadow: "shadow-indigo-500/20",
     },
     {
-      title: "Siroc (Front & Back)",
+      title: "Siroc (Arquitectura Hexagonal)",
       description:
-        "Sistema con arquitectura hexagonal. Desarrollé el frontend y participé en el backend usando principios de Clean Architecture.",
-      technologies: [
-        "React",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Vercel",
-        "Git",
-        "GitHub",
-        "Java",
-        "Spring Boot",
-        "Supabase",
-      ],
-      icon: "fa-solid fa-gears",
+        "Sistema complejo implementando Arquitectura Hexagonal y principios Clean Code. Separación estricta de capas de dominio e infraestructura.",
+      technologies: ["React", "Java", "Spring Boot", "PostgreSQL", "Supabase"],
+      icon: <Settings size={32} />,
       repoUrl: "https://github.com/Chiki738/siroc",
-      extraRepo: "https://github.com/cj-laos/hexagonal",
-      color: "from-green-500 to-emerald-500",
+      extraRepo: "https://github.com/cj-laos/hexagonal", // Tiene extraRepo -> Divide en Front/Back
+      color: "from-emerald-500 to-green-600",
+      shadow: "shadow-emerald-500/20",
     },
   ];
 
   return (
-    <div className="min-h-screen from-yellow-50 to-yellow-100 dark:from-gray-900 dark:to-gray-800 pt-24 pb-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 pt-24 pb-20 relative overflow-hidden transition-colors duration-500">
+      {/* Fondo Decorativo */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-yellow-100/50 to-transparent dark:from-yellow-900/10 pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Encabezado */}
+        <div className="text-center mb-16 animate-fade-up">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">
             Mis{" "}
-            <span className="text-yellow-600 dark:text-yellow-400">
+            <span className="text-yellow-500 relative inline-block">
               Proyectos
             </span>
           </h1>
-          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-            Explora los proyectos en los que he trabajado, desde aplicaciones
-            personales hasta sistemas colaborativos.
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            Una colección de mis trabajos más recientes, abarcando desde
+            aplicaciones web interactivas hasta sistemas backend robustos.
           </p>
         </div>
 
+        {/* Grid de Proyectos */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl">
+              className={`
+                group flex flex-col bg-white dark:bg-gray-900 rounded-3xl overflow-hidden 
+                border border-gray-100 dark:border-gray-800
+                shadow-lg hover:shadow-2xl hover:shadow-yellow-500/10 dark:hover:shadow-yellow-900/10
+                transition-all duration-300 hover:-translate-y-2
+                animate-fade-up
+              `}
+              style={{ animationDelay: `${index * 100}ms` }}>
+              {/* Header de la Card con Gradiente */}
               <div
-                className={`bg-gradient-to-r ${project.color} p-6 text-white`}>
-                <div className="flex items-center justify-between mb-4">
-                  <i className={`${project.icon} text-4xl`}></i>
-                  <span className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">
-                    Proyecto {index + 1}
-                  </span>
+                className={`relative h-32 bg-gradient-to-r ${project.color} p-6 flex items-center justify-between overflow-hidden`}>
+                {/* Decoración de fondo en el header */}
+                <div className="absolute right-0 top-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-500" />
+
+                <div className="relative z-10 text-white p-3 bg-white/20 backdrop-blur-sm rounded-2xl border border-white/20 shadow-inner">
+                  {project.icon}
                 </div>
-                <h3 className="text-xl font-bold">{project.title}</h3>
+
+                <span className="relative z-10 text-xs font-bold text-white/90 bg-black/20 px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-md">
+                  {index + 1 < 10 ? `0${index + 1}` : index + 1}
+                </span>
               </div>
 
-              <div className="p-6">
-                <p className="text-gray-700 dark:text-gray-300 mb-4 min-h-[80px]">
+              {/* Contenido */}
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors">
+                  {project.title}
+                </h3>
+
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1">
                   {project.description}
                 </p>
 
-                <div className="mb-4">
-                  <p className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-2">
-                    Tecnologías:
-                  </p>
+                {/* Tecnologías */}
+                <div className="mb-6">
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 rounded-full text-xs font-medium">
+                        className="px-2.5 py-1 text-xs font-semibold rounded-md 
+                        bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300
+                        border border-gray-200 dark:border-gray-700
+                        group-hover:border-yellow-200 dark:group-hover:border-yellow-900/50 transition-colors">
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-3">
+                {/* Botones de Acción - LÓGICA MODIFICADA */}
+                <div className="space-y-3 mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
                   <a
                     href={project.repoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full bg-gray-800 dark:bg-gray-700 hover:bg-gray-900 dark:hover:bg-gray-600 text-white py-3 rounded-lg transition-colors font-medium">
-                    <i className="fa-brands fa-github"></i>
-                    <span>Repositorio Frontend</span>
+                    className="cursor-pointer flex items-center justify-center gap-2 w-full px-4 py-2.5 
+                    bg-gray-900 dark:bg-white text-white dark:text-gray-900 
+                    rounded-xl font-bold text-sm shadow-lg 
+                    hover:bg-gray-800 dark:hover:bg-gray-100 
+                    hover:scale-[1.02] active:scale-95 transition-all duration-200">
+                    <Github size={18} />
+                    {/* Texto condicional */}
+                    <span>
+                      {project.extraRepo
+                        ? "Repositorio Frontend"
+                        : "Ver Repositorio"}
+                    </span>
+                    <ExternalLink size={14} className="opacity-50" />
                   </a>
 
                   {project.extraRepo && (
@@ -156,8 +180,13 @@ export default function Proyectos() {
                       href={project.extraRepo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full bg-gray-700 dark:bg-gray-600 hover:bg-gray-800 dark:hover:bg-gray-500 text-white py-3 rounded-lg transition-colors font-medium">
-                      <i className="fa-brands fa-github"></i>
+                      className="cursor-pointer flex items-center justify-center gap-2 w-full px-4 py-2.5 
+                      bg-white dark:bg-gray-800 text-gray-700 dark:text-white 
+                      border border-gray-200 dark:border-gray-700
+                      rounded-xl font-bold text-sm
+                      hover:bg-gray-50 dark:hover:bg-gray-700 
+                      hover:scale-[1.02] active:scale-95 transition-all duration-200">
+                      <Github size={18} />
                       <span>Repositorio Backend</span>
                     </a>
                   )}

@@ -1,50 +1,45 @@
-# 🌟 Portafolio - Carlos Alzamora (Chiki)
+# 🌟 Portafolio – Carlos “Chiki” Alzamora
 
-Bienvenido a mi portafolio personal, desarrollado con **HTML**, **CSS**, **TypeScript** y **TailwindCSS**.  
-Este proyecto representa mi enfoque profesional, técnico y creativo, mostrando mi experiencia, habilidades y compromiso con la mejora continua.
+Portafolio web personal desarrollado con **HTML**, **CSS**, **TypeScript** y **TailwindCSS** para presentar mi perfil, habilidades técnicas y proyectos en desarrollo web.
 
 ---
 
 ## 👨‍💻 Sobre mí
 
-Soy un profesional **proactivo y adaptable**, orientado a **resultados y mejora continua**.  
-Cuento con experiencia en **instalación, configuración y mantenimiento** de equipos, redes y software, optimizando el rendimiento y la productividad.  
-Me destaco por trabajar bajo presión, **priorizar tareas** y **adaptarme rápidamente** a nuevos entornos, aportando siempre **soluciones eficientes, seguras y de calidad**.
+Soy **estudiante de Ingeniería de Sistemas e Informática (10.º ciclo)**, con interés en el desarrollo web y experiencia en proyectos frontend y soporte técnico. Me caracterizo por ser **proactivo**, **organizado** y orientado a la **mejora continua**, buscando siempre entregar soluciones **eficientes, seguras y de calidad** en entornos colaborativos. :contentReference[oaicite:0]{index=0}  
 
-> 💬 _"Tú tranquilo, yo nervioso."_
+> 💬 _"Tú tranquilo, yo nervioso."_  
 
 ---
 
-## 🚀 Tecnologías Utilizadas
+## 🚀 Tecnologías utilizadas
 
 - **HTML5**
 - **CSS3**
 - **TypeScript**
 - **TailwindCSS**
-- **Git / GitHub**
+- **Git & GitHub**
 - **Vercel**
 
 ---
 
-## 💼 Proyecto Destacado
+## 💼 Proyecto destacado: Portafolio personal
 
-### 🌐 **Portafolio Personal**
-
-Un sitio web moderno y responsivo creado para mostrar mi perfil profesional, habilidades y experiencia en desarrollo frontend.
+Sitio web moderno y responsivo para mostrar mi perfil profesional, habilidades y proyectos.
 
 **Características principales:**
 
-- Diseño limpio, moderno y adaptable a cualquier dispositivo.
-- Secciones de presentación, habilidades y contacto.
-- Uso de **TailwindCSS** para un diseño ágil y optimizado.
-- Despliegue automático con **Vercel** y control de versiones en **GitHub**.
+- Diseño limpio y adaptable a **dispositivos móviles, tablets y desktop**.
+- Secciones de **presentación**, **habilidades**, **proyectos** y **contacto**.
+- Estilos creados con **TailwindCSS** para un desarrollo rápido y mantenible.
+- Despliegue continuo con **Vercel** y manejo de versiones con **GitHub**.
 
-🔗 **Repositorio:** [https://github.com/Chiki738/portafolio](https://github.com/Chiki738/portafolio)  
-🌍 **Sitio en línea:** [https://portafolio-chiki.vercel.app](https://portafolio-chiki.vercel.app)
+🔗 **Repositorio:** <https://github.com/Chiki738/portafolio>  
+🌍 **Sitio en línea:** <https://portafolio-chiki.vercel.app>
 
 ---
 
-## ⚙️ Instalación y Ejecución
+## ⚙️ Instalación y ejecución
 
 ```bash
 # Clonar el repositorio
@@ -58,15 +53,3 @@ npm install
 
 # Ejecutar en modo desarrollo
 npm run dev
-Luego abre http://localhost:5173 en tu navegador.
-
-📄 Licencia
-Este proyecto está bajo la licencia MIT.
-Eres libre de usar y modificar el código con fines educativos o personales, otorgando crédito al autor original.
-
-✨ Autor
-👤 Carlos Alzamora (Chiki)
-📧 carlosalzamorah@gmail.com
-🔗 LinkedIn
-💻 GitHub
-```

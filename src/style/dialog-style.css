@@ -1,4 +1,5 @@
-@keyframes fade-in {
+/* 1. Animación suave para la aparición del Modal (Solo Opacidad) */
+@keyframes fadeInSimple {
     from {
         opacity: 0;
     }
@@ -8,22 +9,30 @@
     }
 }
 
-@keyframes scale-in {
-    from {
+.animate-modal-fade {
+    animation: fadeInSimple 0.3s ease-out forwards;
+}
+
+/* 2. Animación exclusiva para los botones (Suben y aparecen) */
+@keyframes buttonsSlideUp {
+    0% {
         opacity: 0;
-        transform: scale(0.9);
+        transform: translateY(20px);
+        /* Empiezan más abajo */
     }
 
-    to {
+    100% {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
+        /* Terminan en su sitio */
     }
 }
 
-.animate-fade-in {
-    animation: fade-in 0.3s ease-out;
-}
-
-.animate-scale-in {
-    animation: scale-in 0.3s ease-out;
+.animate-buttons-entry {
+    /* Los botones tardan un poquito más en aparecer para dar efecto de secuencia */
+    animation: buttonsSlideUp 0.6s ease-out forwards;
+    animation-delay: 0.2s;
+    /* Esperan 0.2s antes de empezar */
+    opacity: 0;
+    /* Ojo: Esto se controla con el animation-fill-mode: forwards */
 }
