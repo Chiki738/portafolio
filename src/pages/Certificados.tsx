@@ -3,7 +3,6 @@ import {
   GitBranch,
   Languages,
   Monitor,
-  Award,
   ExternalLink,
   Building2,
   Calendar,
