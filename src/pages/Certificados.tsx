@@ -78,15 +78,6 @@ export default function Certificados() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Encabezado */}
         <div className="text-center mb-16 animate-fade-up">
-          <div className="inline-flex items-center justify-center p-2 bg-yellow-100 dark:bg-yellow-900/30 rounded-full mb-4">
-            <Award
-              className="text-yellow-600 dark:text-yellow-400 mr-2"
-              size={20}
-            />
-            <span className="text-sm font-bold text-yellow-700 dark:text-yellow-300 px-2">
-              Logros Académicos
-            </span>
-          </div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">
             Mis{" "}
             <span className="text-yellow-500 relative inline-block">

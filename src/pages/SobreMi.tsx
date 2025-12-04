@@ -178,29 +178,37 @@ export default function SobreMi() {
         </div>
 
         {/* 3. ARSENAL TECNOLÓGICO */}
-        <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-800 p-8 md:p-12 animate-fade-up delay-200 overflow-hidden relative group">
+        <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-800 p-6 md:p-12 animate-fade-up delay-200 overflow-hidden relative group">
           {/* Fondo sutil interno */}
           <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#1f2937_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
 
           <div className="relative z-10">
-            <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">
               Arsenal Tecnológico
             </h2>
 
-            {/* Filtros */}
-            <div className="flex flex-wrap justify-center gap-2 mb-12">
+            {/* --- FILTROS MEJORADOS PARA MÓVIL --- */}
+            {/* En móvil: flex-nowrap + overflow-x-auto (Scroll horizontal)
+                En escritorio (md): flex-wrap + justify-center (Centrado clásico)
+            */}
+            <div
+              className="
+                flex items-center gap-3 mb-10 overflow-x-auto pb-4 
+                md:flex-wrap md:justify-center md:pb-0 md:overflow-visible
+                scrollbar-hide mask-linear-gradient
+            ">
               {(["Todos", "Avanzado", "Intermedio", "Básico"] as Nivel[]).map(
                 (nivel) => (
                   <button
                     key={nivel}
                     onClick={() => setNivelSeleccionado(nivel)}
-                    // AGREGADO: cursor-pointer aquí (los botones ya suelen tenerlo por defecto, pero se fuerza por si acaso con Tailwind)
                     className={`
-                      cursor-pointer px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 transform
+                      cursor-pointer px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 
+                      whitespace-nowrap flex-shrink-0 border border-transparent
                       ${
                         nivelSeleccionado === nivel
                           ? "bg-gradient-to-r from-yellow-500 to-yellow-600 text-white shadow-lg shadow-yellow-500/30 scale-105"
-                          : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+                          : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 border-gray-200 dark:border-gray-700"
                       }
                     `}>
                     {nivel}
@@ -212,12 +220,11 @@ export default function SobreMi() {
             {/* Grid de Iconos */}
             <div className="min-h-[160px]">
               {niveles[nivelSeleccionado].length > 0 ? (
-                <div className="flex flex-wrap justify-center gap-6 animate-fade-in">
+                <div className="flex flex-wrap justify-center gap-4 md:gap-6 animate-fade-in">
                   {niveles[nivelSeleccionado].map((tech, index) => (
                     <div
                       key={tech}
-                      // AGREGADO: cursor-pointer aquí
-                      className="cursor-pointer group/icon relative flex flex-col items-center gap-3 transition-transform duration-300 hover:-translate-y-2 p-2"
+                      className="cursor-pointer group/icon relative flex flex-col items-center gap-2 md:gap-3 transition-transform duration-300 hover:-translate-y-2 p-2"
                       style={{ animationDelay: `${index * 50}ms` }}>
                       <div className="relative">
                         {/* Efecto Glow detrás del icono */}
@@ -225,19 +232,25 @@ export default function SobreMi() {
                         <img
                           src={generateIconUrl(tech)}
                           alt={tech}
-                          className="w-14 h-14 md:w-16 md:h-16 drop-shadow-sm group-hover/icon:drop-shadow-xl transition-all relative z-10"
+                          // Iconos ligeramente más pequeños en móvil (w-12) y normales en desktop (w-16)
+                          className="w-12 h-12 md:w-16 md:h-16 drop-shadow-sm group-hover/icon:drop-shadow-xl transition-all relative z-10"
                         />
                       </div>
-                      <span className="text-xs font-bold text-gray-600 dark:text-gray-400 opacity-0 group-hover/icon:opacity-100 transition-opacity absolute -bottom-4 capitalize bg-white dark:bg-gray-800 px-2 py-0.5 rounded-md shadow-sm">
+                      <span className="text-[10px] md:text-xs font-bold text-gray-600 dark:text-gray-400 opacity-0 group-hover/icon:opacity-100 transition-opacity absolute -bottom-4 capitalize bg-white dark:bg-gray-800 px-2 py-0.5 rounded-md shadow-sm z-20 pointer-events-none whitespace-nowrap">
                         {tech}
                       </span>
                     </div>
                   ))}
                 </div>
               ) : (
-                <p className="text-center text-gray-500 italic">
-                  No hay tecnologías listadas en este nivel.
-                </p>
+                <div className="flex flex-col items-center justify-center py-10 opacity-50">
+                  <div className="w-16 h-16 bg-gray-200 dark:bg-gray-800 rounded-full flex items-center justify-center mb-3">
+                    <span className="text-2xl">🔍</span>
+                  </div>
+                  <p className="text-gray-500 italic">
+                    No hay tecnologías listadas en este nivel.
+                  </p>
+                </div>
               )}
             </div>
           </div>
