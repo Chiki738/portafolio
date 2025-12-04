@@ -76,11 +76,6 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center space-y-8">
-          {/* Nombre con efecto */}
-          <h2 className="text-2xl font-bold text-gray-100 tracking-wide hover:text-yellow-400 transition-colors duration-300 cursor-default select-none">
-            Carlos Alzamora - Chiki
-          </h2>
-
           {/* Iconos Sociales */}
           <div className="flex items-center gap-8">
             {socialLinks.map((link) => (

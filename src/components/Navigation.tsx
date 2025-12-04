@@ -91,6 +91,7 @@ export default function Navigation() {
           {/* Logo */}
           <div
             onClick={() => handleNavigate(NAV_ITEMS[0])}
+            // Ya tenía cursor-pointer, se mantiene
             className="group flex items-center gap-3 cursor-pointer select-none">
             <div className="relative overflow-hidden rounded-full w-10 h-10 shadow-md group-hover:scale-105 transition-transform duration-300">
               <img
@@ -115,8 +116,8 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => handleNavigate(item)}
-                  // AGREGADO: group para controlar el hover de los hijos
-                  className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 group flex items-center gap-2
+                  // AGREGADO: cursor-pointer aquí
+                  className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 group flex items-center gap-2 cursor-pointer
                     ${
                       isActive && !item.external
                         ? "text-yellow-700 dark:text-yellow-400 bg-yellow-100/50 dark:bg-yellow-900/20"
@@ -135,7 +136,7 @@ export default function Navigation() {
                     <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-yellow-500 rounded-full animate-fade-in" />
                   )}
 
-                  {/* 2. NUEVO: EFECTO HOVER (Línea que crece desde el centro) */}
+                  {/* 2. EFECTO HOVER (Línea que crece desde el centro) */}
                   {!isActive && (
                     <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-yellow-400/50 rounded-full transition-all duration-300 group-hover:w-1/2" />
                   )}
@@ -147,7 +148,8 @@ export default function Navigation() {
           {/* Botón Hamburguesa */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="min-[996px]:hidden p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+            // AGREGADO: cursor-pointer aquí
+            className="min-[996px]:hidden p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors cursor-pointer"
             aria-label="Abrir menú">
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -163,7 +165,8 @@ export default function Navigation() {
                   <button
                     key={item.id}
                     onClick={() => handleNavigate(item)}
-                    className={`flex items-center gap-3 w-full p-3 rounded-xl transition-all duration-200
+                    // AGREGADO: cursor-pointer aquí
+                    className={`flex items-center gap-3 w-full p-3 rounded-xl transition-all duration-200 cursor-pointer
                       ${
                         isActive && !item.external
                           ? "bg-yellow-50 dark:bg-yellow-900/20 text-yellow-700 dark:text-yellow-400 font-semibold pl-6 border-l-4 border-yellow-500"
