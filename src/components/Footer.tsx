@@ -51,13 +51,6 @@ export default function Footer() {
         "hover:text-blue-400 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]",
     },
     {
-      name: "WhatsApp",
-      icon: <MessageCircle size={24} />,
-      url: "https://wa.me/51956299119?text=Hola%20Carlos,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte.",
-      colorClass:
-        "hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(74,222,128,0.6)]",
-    },
-    {
       name: "Email",
       icon: <Mail size={24} />,
       url: "mailto:carlosalzamorah@gmail.com",
