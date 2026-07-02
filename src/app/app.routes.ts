@@ -1,41 +1,37 @@
 import { Routes } from '@angular/router';
-import { CertificatesPage } from './pages/certificates-page';
-import { HomePage } from './pages/home-page';
-import { ProjectsPage } from './pages/projects-page';
-import { AboutPage } from './pages/about-page';
 
 export const routes: Routes = [
   {
     path: '',
-    component: HomePage,
+    loadComponent: () => import('./pages/home-page').then((page) => page.HomePage),
     title: 'Portafolio | Chiki',
     data: {
       description:
-        'Portafolio de Carlos Alzamora (@Chiki). Ingeniería de Sistemas y Desarrollador',
+        'Portafolio de Carlos Alzamora (@Chiki). Ingeniería de Sistemas y desarrollador web.',
     },
   },
   {
     path: 'sobreMi',
-    component: AboutPage,
-    title: 'Sobre Mi | Chiki',
+    loadComponent: () => import('./pages/about-page').then((page) => page.AboutPage),
+    title: 'Sobre mí | Chiki',
     data: {
-      description: 'Informacion personal y tecnica de Carlos Alzamora.',
+      description: 'Información personal y técnica de Carlos Alzamora.',
     },
   },
   {
     path: 'proyectos',
-    component: ProjectsPage,
+    loadComponent: () => import('./pages/projects-page').then((page) => page.ProjectsPage),
     title: 'Proyectos | Chiki',
     data: {
-      description: 'Proyectos de desarrollo web y habilidades tecnicas.',
+      description: 'Proyectos de desarrollo web y habilidades técnicas.',
     },
   },
   {
     path: 'certificados',
-    component: CertificatesPage,
+    loadComponent: () => import('./pages/certificates-page').then((page) => page.CertificatesPage),
     title: 'Certificados | Chiki',
     data: {
-      description: 'Certificados y formacion de Carlos Alzamora.',
+      description: 'Certificados y formación de Carlos Alzamora.',
     },
   },
   {

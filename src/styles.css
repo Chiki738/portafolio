@@ -1,20 +1,15 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-/* =========================================
-   1. CONFIGURACION BASE Y VARIABLES
-   ========================================= */
 @layer base {
   :root {
-    /* Variables para facilitar cambios de tema futuros */
-    --scroll-track: rgb(53, 53, 53);
-    --scroll-thumb: #fff34d;
-    --scroll-thumb-hover: #e6db45;
+    --scroll-track: #e6f2ef;
+    --scroll-thumb: #0f766e;
+    --scroll-thumb-hover: #115e59;
   }
 
   html {
-    background-color: #fffcab;
+    background-color: #f7fbf8;
     scroll-behavior: smooth;
-    /* Soporte Scrollbar Firefox */
     scrollbar-width: thin;
     scrollbar-color: var(--scroll-thumb) var(--scroll-track);
   }
@@ -22,9 +17,17 @@
   body {
     margin: 0;
     padding: 0;
+    color: #13201d;
+    font-family:
+      Inter,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      sans-serif;
   }
 
-  /* Soporte Scrollbar Webkit (Chrome, Edge, Safari) */
   body::-webkit-scrollbar {
     width: 12px;
   }
@@ -36,7 +39,7 @@
   body::-webkit-scrollbar-thumb {
     background-color: var(--scroll-thumb);
     border-radius: 12px;
-    border: 2px solid #000000;
+    border: 3px solid var(--scroll-track);
     transition: background-color 0.3s ease;
   }
 
@@ -44,14 +47,18 @@
     background-color: var(--scroll-thumb-hover);
   }
 
-  /* Media query integrada para modo oscuro */
   @media (prefers-color-scheme: dark) {
+    :root {
+      --scroll-track: #0f172a;
+      --scroll-thumb: #5eead4;
+      --scroll-thumb-hover: #99f6e4;
+    }
+
     html {
-      background-color: rgb(17, 24, 39);
+      background-color: #071512;
     }
   }
 
-  /* ACCESIBILIDAD: Desactiva animaciones si el usuario lo prefiere */
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
@@ -68,33 +75,25 @@
   }
 }
 
-/* =========================================
-   2. CLASES DE COMPONENTES (.fondo-animado)
-   ========================================= */
 @layer components {
   .fondo-animado {
-    /* MODO CLARO */
-    background: linear-gradient(-45deg, #fffbeb, #ffffff, #fef9c3, #fff7ed);
-    background-size: 400% 400%;
-    animation: gradientMove 15s ease infinite;
+    background:
+      radial-gradient(circle at 50% 0%, rgb(204 251 241 / 0.55), transparent 34rem),
+      linear-gradient(135deg, #f7fbf8 0%, #eef8f4 45%, #fffaf0 100%);
     min-height: 100vh;
     width: 100%;
   }
 
   @media (prefers-color-scheme: dark) {
     .fondo-animado {
-      /* MODO OSCURO */
-      background: linear-gradient(-45deg, #0f172a, #1f2937, #111827, #000000);
-      background-size: 400% 400%;
+      background:
+        radial-gradient(circle at 50% 0%, rgb(20 184 166 / 0.22), transparent 32rem),
+        linear-gradient(135deg, #071512 0%, #0f172a 55%, #111827 100%);
     }
   }
 }
 
-/* =========================================
-   3. UTILIDADES DE ANIMACION
-   ========================================= */
 @layer utilities {
-  /* Keyframes definidos */
   @keyframes gradientMove {
     0% {
       background-position: 0% 50%;
@@ -208,7 +207,6 @@
     }
   }
 
-  /* Clases utilitarias */
   .animate-fade-up {
     animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
     opacity: 0;

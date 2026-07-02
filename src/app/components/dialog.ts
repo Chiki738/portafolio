@@ -13,7 +13,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
         ></button>
 
         <div
-          class="relative w-full max-w-md rounded-2xl bg-white p-8 shadow-2xl animate-modal-fade dark:bg-gray-800"
+          class="relative w-full max-w-md rounded-lg border border-teal-900/10 bg-white p-8 shadow-2xl shadow-teal-950/10 animate-modal-fade dark:border-teal-300/10 dark:bg-gray-900"
           role="dialog"
           aria-modal="true"
           aria-labelledby="welcome-title"
@@ -44,7 +44,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
               id="welcome-title"
               class="mb-4 text-2xl font-bold text-gray-800 dark:text-white md:text-3xl"
             >
-              Bienvenido a mi Portafolio!
+              Bienvenido a mi portafolio
             </h2>
 
             <p class="mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
@@ -56,7 +56,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
                 href="https://github.com/Chiki738/portafolio"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="flex w-full items-center justify-center gap-2 rounded-lg bg-gray-800 py-3 font-medium text-white shadow-md transition-all duration-200 hover:-translate-y-1 hover:bg-gray-900 hover:shadow-lg dark:bg-gray-700 dark:hover:bg-gray-600"
+                class="flex w-full items-center justify-center gap-2 rounded-lg bg-gray-900 py-3 font-medium text-white shadow-md transition-all duration-200 hover:-translate-y-1 hover:bg-gray-800 hover:shadow-lg dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100"
               >
                 <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path
@@ -70,7 +70,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
               <button
                 type="button"
-                class="w-full cursor-pointer rounded-lg bg-yellow-300 py-3 font-medium text-black shadow-md transition-all duration-200 hover:-translate-y-1 hover:bg-yellow-400 hover:shadow-lg"
+                class="w-full cursor-pointer rounded-lg bg-teal-600 py-3 font-medium text-white shadow-md shadow-teal-500/15 transition-all duration-200 hover:-translate-y-1 hover:bg-teal-500 hover:shadow-lg"
                 (click)="close.emit()"
               >
                 Continuar

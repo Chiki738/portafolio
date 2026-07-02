@@ -19,7 +19,7 @@ type NavItem = {
       [class.-translate-y-full]="!isVisible"
     >
       <div
-        class="border-b border-white/20 bg-white/90 shadow-sm backdrop-blur-md dark:border-gray-700 dark:bg-gray-900/90"
+        class="border-b border-teal-900/10 bg-white/90 shadow-sm shadow-teal-950/5 backdrop-blur-md dark:border-teal-300/10 dark:bg-gray-950/90"
       >
         <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
           <button
@@ -33,7 +33,7 @@ type NavItem = {
               <img src="/assets/perfilAnimado.jpg" alt="Logo" class="size-full object-cover" />
             </span>
             <span
-              class="text-xl font-bold text-gray-800 transition-colors group-hover:text-yellow-600 dark:text-white dark:group-hover:text-yellow-400"
+              class="text-xl font-bold text-gray-800 transition-colors group-hover:text-teal-700 dark:text-white dark:group-hover:text-teal-300"
             >
               Portafolio
             </span>
@@ -44,16 +44,16 @@ type NavItem = {
               <button
                 type="button"
                 class="group relative flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all duration-300"
-                [class.bg-yellow-100/50]="isActive(item)"
-                [class.text-yellow-700]="isActive(item)"
-                [class.dark:bg-yellow-900/20]="isActive(item)"
-                [class.dark:text-yellow-400]="isActive(item)"
+                [class.bg-teal-50]="isActive(item)"
+                [class.text-teal-700]="isActive(item)"
+                [class.dark:bg-teal-900/20]="isActive(item)"
+                [class.dark:text-teal-300]="isActive(item)"
                 [class.text-gray-600]="!isActive(item)"
                 [class.dark:text-gray-300]="!isActive(item)"
-                [class.hover:bg-yellow-50/50]="!isActive(item)"
+                [class.hover:bg-teal-50]="!isActive(item)"
                 [class.dark:hover:bg-gray-800/50]="!isActive(item)"
-                [class.hover:text-yellow-600]="!isActive(item)"
-                [class.dark:hover:text-yellow-400]="!isActive(item)"
+                [class.hover:text-teal-700]="!isActive(item)"
+                [class.dark:hover:text-teal-300]="!isActive(item)"
                 (click)="handleNavigate(item)"
               >
                 <span
@@ -68,11 +68,11 @@ type NavItem = {
                 {{ item.label }}
                 @if (isActive(item)) {
                   <span
-                    class="absolute bottom-0 left-1/2 h-0.5 w-1/2 -translate-x-1/2 rounded-full bg-yellow-500"
+                    class="absolute bottom-0 left-1/2 h-0.5 w-1/2 -translate-x-1/2 rounded-full bg-teal-500"
                   ></span>
                 } @else {
                   <span
-                    class="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-yellow-400/50 transition-all duration-300 group-hover:w-1/2"
+                    class="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-teal-400/60 transition-all duration-300 group-hover:w-1/2"
                   ></span>
                 }
               </button>
@@ -109,20 +109,20 @@ type NavItem = {
                   type="button"
                   class="flex w-full cursor-pointer items-center gap-3 rounded-xl p-3 transition-all duration-200"
                   [class.border-l-4]="isActive(item)"
-                  [class.border-yellow-500]="isActive(item)"
-                  [class.bg-yellow-50]="isActive(item)"
+                  [class.border-teal-500]="isActive(item)"
+                  [class.bg-teal-50]="isActive(item)"
                   [class.pl-6]="isActive(item)"
                   [class.font-semibold]="isActive(item)"
-                  [class.text-yellow-700]="isActive(item)"
-                  [class.dark:bg-yellow-900/20]="isActive(item)"
-                  [class.dark:text-yellow-400]="isActive(item)"
+                  [class.text-teal-700]="isActive(item)"
+                  [class.dark:bg-teal-900/20]="isActive(item)"
+                  [class.dark:text-teal-300]="isActive(item)"
                   [class.text-gray-600]="!isActive(item)"
                   [class.dark:text-gray-400]="!isActive(item)"
-                  [class.hover:bg-yellow-50/50]="!isActive(item)"
+                  [class.hover:bg-teal-50]="!isActive(item)"
                   [class.dark:hover:bg-gray-800]="!isActive(item)"
                   [class.hover:pl-6]="!isActive(item)"
-                  [class.hover:text-yellow-600]="!isActive(item)"
-                  [class.dark:hover:text-yellow-400]="!isActive(item)"
+                  [class.hover:text-teal-700]="!isActive(item)"
+                  [class.dark:hover:text-teal-300]="!isActive(item)"
                   (click)="handleNavigate(item)"
                 >
                   <span aria-hidden="true">
@@ -272,7 +272,7 @@ export class NavigationComponent {
   protected isMobileMenuOpen = false;
   protected readonly navItems: NavItem[] = [
     { id: '/', label: 'Inicio', icon: 'home', external: false },
-    { id: '/sobreMi', label: 'Sobre Mi', icon: 'user', external: false },
+    { id: '/sobreMi', label: 'Sobre mí', icon: 'user', external: false },
     { id: '/proyectos', label: 'Proyectos', icon: 'folder', external: false },
     { id: '/certificados', label: 'Certificados', icon: 'award', external: false },
     { id: 'https://github.com/Chiki738', label: 'GitHub', icon: 'github', external: true },

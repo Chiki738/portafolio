@@ -1,14 +1,14 @@
 # Portafolio - Carlos "Chiki" Alzamora
 
-Portafolio web personal desarrollado con Angular, TypeScript y Tailwind CSS para presentar mi perfil, habilidades tecnicas, proyectos y certificados.
+Portafolio web personal desarrollado con Angular, TypeScript y Tailwind CSS para presentar mi perfil, habilidades técnicas, proyectos y certificados.
 
 ## Sobre mi
 
-Soy estudiante de Ingenieria de Sistemas e Informatica, con interes en el desarrollo web y experiencia en proyectos frontend, backend y soporte tecnico. Me caracterizo por ser proactivo, organizado y orientado a la mejora continua, buscando entregar soluciones eficientes, seguras y de calidad en entornos colaborativos.
+Soy estudiante de Ingeniería de Sistemas e Informática, con interés en el desarrollo web y experiencia en proyectos frontend, backend y soporte técnico. Me caracterizo por ser proactivo, organizado y orientado a la mejora continua, buscando entregar soluciones eficientes, seguras y de calidad en entornos colaborativos.
 
 > "Tu tranquilo, yo nervioso."
 
-## Tecnologias utilizadas
+## Tecnologías utilizadas
 
 - Angular
 - TypeScript
@@ -20,25 +20,25 @@ Soy estudiante de Ingenieria de Sistemas e Informatica, con interes en el desarr
 
 ## Secciones
 
-- Inicio: presentacion, perfil y enlaces de contacto.
-- Sobre Mi: formacion, habilidades, tecnologias e idiomas.
+- Inicio: presentación, perfil y enlaces de contacto.
+- Sobre mí: formación, habilidades, tecnologías e idiomas.
 - Proyectos: repositorios y trabajos destacados.
 - Certificados: credenciales y aprendizaje continuo.
 
-## Instalacion y ejecucion
+## Instalación y ejecución
 
 ```bash
 pnpm install
 pnpm start
 ```
 
-La aplicacion queda disponible en:
+La aplicación queda disponible en:
 
 ```bash
 http://localhost:4200
 ```
 
-## Comandos utiles
+## Comandos útiles
 
 ```bash
 pnpm build

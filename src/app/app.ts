@@ -10,7 +10,9 @@ import { NavigationComponent } from './components/navigation';
   selector: 'app-root',
   imports: [DialogComponent, FooterComponent, NavigationComponent, RouterOutlet],
   template: `
-    <div class="min-h-screen bg-white text-gray-950 transition-colors dark:bg-gray-950 dark:text-white">
+    <div
+      class="min-h-screen bg-white text-gray-950 transition-colors dark:bg-gray-950 dark:text-white"
+    >
       <app-navigation />
       <main class="pt-16">
         <router-outlet />
@@ -26,7 +28,7 @@ export class App implements OnInit {
   private readonly title = inject(Title);
   private readonly meta = inject(Meta);
 
-  protected showWelcomeDialog = true;
+  protected showWelcomeDialog = false;
 
   ngOnInit(): void {
     this.router.events
@@ -38,7 +40,7 @@ export class App implements OnInit {
         const pageTitle = route.snapshot.title ?? 'Portafolio | Chiki';
         const description =
           route.snapshot.data['description'] ??
-          'Portafolio de Carlos Alzamora (@Chiki). Ingeniería de Sistemas y Desarrollador';
+          'Portafolio de Carlos Alzamora (@Chiki). Ingeniería de Sistemas y desarrollador web.';
 
         this.title.setTitle(pageTitle);
         this.meta.updateTag({ name: 'description', content: description });

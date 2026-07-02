@@ -29,44 +29,42 @@ type EducationItem = {
   border: string;
 };
 
-type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
+type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Básico';
 
 @Component({
   selector: 'app-about-page',
   imports: [NgClass, NgTemplateOutlet],
   template: `
     <section
-      class="relative min-h-screen overflow-hidden bg-gray-50 pb-20 pt-24 transition-colors duration-500 dark:bg-gray-950"
+      class="relative min-h-screen overflow-hidden bg-[#f7fbf8] pb-20 pt-24 transition-colors duration-500 dark:bg-gray-950"
     >
       <div
-        class="pointer-events-none absolute right-0 top-0 -z-0 size-[500px] rounded-full bg-yellow-200/20 blur-[100px] dark:bg-yellow-900/10"
-        aria-hidden="true"
-      ></div>
-      <div
-        class="pointer-events-none absolute bottom-0 left-0 -z-0 size-[400px] rounded-full bg-blue-200/20 blur-[100px] dark:bg-blue-900/10"
+        class="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(15,118,110,.05)_1px,transparent_1px),linear-gradient(90deg,rgba(15,118,110,.05)_1px,transparent_1px)] [background-size:56px_56px]"
         aria-hidden="true"
       ></div>
 
       <div class="relative z-10 mx-auto max-w-7xl space-y-20 px-4 sm:px-6 lg:px-8">
         <div class="space-y-6 text-center animate-fade-up">
           <h1 class="text-4xl font-extrabold text-gray-900 dark:text-white md:text-5xl">
-            Sobre <span class="relative text-yellow-500">Mi</span>
+            Sobre <span class="relative text-teal-700 dark:text-teal-300">mí</span>
           </h1>
 
           <div
-            class="relative mx-auto max-w-3xl rounded-2xl border border-white/20 bg-white/60 p-8 shadow-xl backdrop-blur-md dark:border-gray-700 dark:bg-gray-800/60"
+            class="relative mx-auto max-w-3xl rounded-lg border border-teal-900/10 bg-white/75 p-8 shadow-xl shadow-teal-950/5 backdrop-blur-md dark:border-teal-300/10 dark:bg-gray-900/70"
           >
             <div
-              class="absolute -left-4 -top-4 font-serif text-6xl text-yellow-500 opacity-30"
+              class="absolute -left-4 -top-4 font-serif text-6xl text-teal-600 opacity-25"
               aria-hidden="true"
             >
               "
             </div>
 
-            <p class="text-center text-lg font-medium leading-relaxed text-gray-700 dark:text-gray-300">
-              Profesional proactivo y adaptable del area de Ingenieria de Sistemas e Informatica,
-              con experiencia en proyectos de desarrollo web y soporte tecnico. Me enfoco en la
-              mejora continua, la organizacion y la resolucion eficiente de problemas, aportando
+            <p
+              class="text-center text-lg font-medium leading-relaxed text-gray-700 dark:text-gray-300"
+            >
+              Profesional proactivo y adaptable del área de Ingeniería de Sistemas e Informática,
+              con experiencia en proyectos de desarrollo web y soporte técnico. Me enfoco en la
+              mejora continua, la organización y la resolución eficiente de problemas, aportando
               soluciones seguras en entornos colaborativos.
             </p>
           </div>
@@ -77,20 +75,20 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
             class="mb-10 flex items-center justify-center gap-3 text-center text-2xl font-bold text-gray-800 dark:text-white"
           >
             <span
-              class="rounded-lg bg-yellow-100 p-2 text-yellow-600 dark:bg-yellow-900/30 dark:text-yellow-400"
+              class="rounded-lg bg-teal-50 p-2 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300"
             >
               <ng-container
                 [ngTemplateOutlet]="iconTemplate"
                 [ngTemplateOutletContext]="{ icon: 'graduation', size: 'size-6' }"
               />
             </span>
-            Formacion Academica
+            Formación Académica
           </h2>
 
           <div class="grid gap-6 md:grid-cols-3">
             @for (item of education; track item.title) {
               <article
-                class="cursor-pointer rounded-2xl border bg-white p-6 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:bg-gray-800/50"
+                class="cursor-pointer rounded-lg border bg-white/85 p-6 shadow-lg shadow-teal-950/5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-gray-900/70"
                 [ngClass]="item.border"
               >
                 <div
@@ -123,7 +121,7 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
         </div>
 
         <div
-          class="group relative overflow-hidden rounded-3xl border border-gray-100 bg-white p-6 shadow-2xl animate-fade-up delay-200 dark:border-gray-800 dark:bg-gray-900 md:p-12"
+          class="group relative overflow-hidden rounded-lg border border-teal-900/10 bg-white/90 p-6 shadow-2xl shadow-teal-950/5 animate-fade-up delay-200 dark:border-teal-300/10 dark:bg-gray-900 md:p-12"
         >
           <div
             class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] opacity-30 [background-size:16px_16px] dark:bg-[radial-gradient(#1f2937_1px,transparent_1px)]"
@@ -131,8 +129,10 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
           ></div>
 
           <div class="relative z-10">
-            <h2 class="mb-8 text-center text-2xl font-bold text-gray-800 dark:text-white md:text-3xl">
-              Arsenal Tecnologico
+            <h2
+              class="mb-8 text-center text-2xl font-bold text-gray-800 dark:text-white md:text-3xl"
+            >
+              Arsenal Tecnológico
             </h2>
 
             <div
@@ -145,11 +145,11 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
                   [class.flex-shrink-0]="true"
                   [class.scale-105]="selectedLevel === level"
                   [class.bg-gradient-to-r]="selectedLevel === level"
-                  [class.from-yellow-500]="selectedLevel === level"
-                  [class.to-yellow-600]="selectedLevel === level"
+                  [class.from-teal-600]="selectedLevel === level"
+                  [class.to-emerald-500]="selectedLevel === level"
                   [class.text-white]="selectedLevel === level"
                   [class.shadow-lg]="selectedLevel === level"
-                  [class.shadow-yellow-500\/30]="selectedLevel === level"
+                  [class.shadow-teal-500/20]="selectedLevel === level"
                   [class.bg-gray-100]="selectedLevel !== level"
                   [class.text-gray-600]="selectedLevel !== level"
                   [class.hover:bg-gray-200]="selectedLevel !== level"
@@ -174,7 +174,7 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
                     >
                       <div class="relative">
                         <div
-                          class="absolute inset-0 rounded-full bg-yellow-400/20 opacity-0 blur-lg transition-opacity group-hover/icon:opacity-100"
+                          class="absolute inset-0 rounded-full bg-teal-400/20 opacity-0 blur-lg transition-opacity group-hover/icon:opacity-100"
                           aria-hidden="true"
                         ></div>
                         <img
@@ -201,7 +201,7 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
                       [ngTemplateOutletContext]="{ icon: 'lightbulb', size: 'size-7' }"
                     />
                   </div>
-                  <p class="italic text-gray-500">No hay tecnologias listadas en este nivel.</p>
+                  <p class="italic text-gray-500">No hay tecnologías listadas en este nivel.</p>
                 </div>
               }
             </div>
@@ -210,9 +210,11 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
 
         <div class="grid gap-8 animate-fade-up delay-300 md:grid-cols-2">
           <article
-            class="rounded-2xl border-t-4 border-blue-500 bg-white p-8 shadow-xl transition-shadow hover:shadow-2xl dark:bg-gray-800"
+            class="rounded-lg border-t-4 border-blue-500 bg-white p-8 shadow-xl transition-shadow hover:shadow-2xl dark:bg-gray-800"
           >
-            <h3 class="mb-6 flex items-center gap-2 text-xl font-bold text-gray-800 dark:text-white">
+            <h3
+              class="mb-6 flex items-center gap-2 text-xl font-bold text-gray-800 dark:text-white"
+            >
               <ng-container
                 [ngTemplateOutlet]="iconTemplate"
                 [ngTemplateOutletContext]="{ icon: 'userCog', size: 'size-6 text-blue-500' }"
@@ -239,9 +241,11 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
           </article>
 
           <article
-            class="rounded-2xl border-t-4 border-green-500 bg-white p-8 shadow-xl transition-shadow hover:shadow-2xl dark:bg-gray-800"
+            class="rounded-lg border-t-4 border-green-500 bg-white p-8 shadow-xl transition-shadow hover:shadow-2xl dark:bg-gray-800"
           >
-            <h3 class="mb-6 flex items-center gap-2 text-xl font-bold text-gray-800 dark:text-white">
+            <h3
+              class="mb-6 flex items-center gap-2 text-xl font-bold text-gray-800 dark:text-white"
+            >
               <ng-container
                 [ngTemplateOutlet]="iconTemplate"
                 [ngTemplateOutletContext]="{ icon: 'languages', size: 'size-6 text-green-500' }"
@@ -264,16 +268,16 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
               </div>
 
               <div
-                class="flex cursor-pointer items-center justify-between rounded-xl bg-gray-50 p-4 transition-colors hover:bg-yellow-50 dark:bg-gray-700/50 dark:hover:bg-yellow-900/10"
+                class="flex cursor-pointer items-center justify-between rounded-xl bg-gray-50 p-4 transition-colors hover:bg-amber-50 dark:bg-gray-700/50 dark:hover:bg-amber-900/10"
               >
                 <div class="flex items-center gap-3">
-                  <span class="size-2 rounded-full bg-yellow-500"></span>
-                  <span class="font-bold text-gray-800 dark:text-white">Ingles</span>
+                  <span class="size-2 rounded-full bg-amber-500"></span>
+                  <span class="font-bold text-gray-800 dark:text-white">Inglés</span>
                 </div>
                 <span
-                  class="rounded-full border border-yellow-200 bg-yellow-100 px-3 py-1 text-xs font-bold text-yellow-700 dark:border-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"
+                  class="rounded-full border border-amber-200 bg-amber-100 px-3 py-1 text-xs font-bold text-amber-700 dark:border-amber-800 dark:bg-amber-900/30 dark:text-amber-300"
                 >
-                  Basico
+                  Básico
                 </span>
               </div>
             </div>
@@ -285,7 +289,16 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
     <ng-template #iconTemplate let-icon="icon" let-size="size">
       @switch (icon) {
         @case ('users') {
-          <svg [class]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg
+            [class]="size"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
             <circle cx="9" cy="7" r="4" />
             <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
@@ -293,7 +306,16 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
           </svg>
         }
         @case ('repeat') {
-          <svg [class]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg
+            [class]="size"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <path d="m17 2 4 4-4 4" />
             <path d="M3 11V9a4 4 0 0 1 4-4h14" />
             <path d="m7 22-4-4 4-4" />
@@ -301,48 +323,122 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
           </svg>
         }
         @case ('lightbulb') {
-          <svg [class]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg
+            [class]="size"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <path d="M9 18h6" />
             <path d="M10 22h4" />
             <path d="M12 2a7 7 0 0 0-4 12c.7.6 1 1.4 1 2h6c0-.6.3-1.4 1-2A7 7 0 0 0 12 2Z" />
           </svg>
         }
         @case ('clock') {
-          <svg [class]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg
+            [class]="size"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <circle cx="12" cy="12" r="10" />
             <path d="M12 6v6l4 2" />
           </svg>
         }
         @case ('message') {
-          <svg [class]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg
+            [class]="size"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z" />
           </svg>
         }
         @case ('chart') {
-          <svg [class]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg
+            [class]="size"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <path d="M3 3v18h18" />
             <path d="m7 16 4-4 3 3 5-7" />
           </svg>
         }
         @case ('graduation') {
-          <svg [class]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg
+            [class]="size"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <path d="m22 10-10-5-10 5 10 5 10-5Z" />
             <path d="M6 12v5c3 2 9 2 12 0v-5" />
           </svg>
         }
         @case ('award') {
-          <svg [class]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg
+            [class]="size"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <circle cx="12" cy="8" r="5" />
             <path d="m8.5 12.5-1 8 4.5-2.5 4.5 2.5-1-8" />
           </svg>
         }
         @case ('wrench') {
-          <svg [class]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M14.7 6.3a4 4 0 0 0-5 5L3 18v3h3l6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-3-3 2.4-2.4Z" />
+          <svg
+            [class]="size"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M14.7 6.3a4 4 0 0 0-5 5L3 18v3h3l6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-3-3 2.4-2.4Z"
+            />
           </svg>
         }
         @case ('languages') {
-          <svg [class]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg
+            [class]="size"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <path d="m5 8 6 6" />
             <path d="m4 14 6-6 2-3" />
             <path d="M2 5h12" />
@@ -352,7 +448,16 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
           </svg>
         }
         @case ('userCog') {
-          <svg [class]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg
+            [class]="size"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <circle cx="9" cy="7" r="4" />
             <path d="M3 21v-2a4 4 0 0 1 4-4h3" />
             <path d="M19 14v2" />
@@ -362,7 +467,16 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Basico';
           </svg>
         }
         @case ('check') {
-          <svg [class]="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg
+            [class]="size"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
             <circle cx="12" cy="12" r="10" />
             <path d="m9 12 2 2 4-5" />
           </svg>
@@ -383,24 +497,24 @@ export class AboutPage {
 
   protected readonly education: EducationItem[] = [
     {
-      title: 'Ingenieria de Sistemas e Informatica',
-      place: 'Universidad Tecnologica del Peru (UTP)',
+      title: 'Ingeniería de Sistemas e Informática',
+      place: 'Universidad Tecnológica del Perú (UTP)',
       date: '2021 - Actualidad (10 ciclo)',
       icon: 'graduation',
-      color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400',
-      border: 'border-blue-200 dark:border-blue-800',
+      color: 'bg-teal-50 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300',
+      border: 'border-teal-100 dark:border-teal-800',
     },
     {
-      title: 'Formacion Front-End & Git',
+      title: 'Formación Front-End & Git',
       place: 'Alura Latam',
       date: '2024',
       icon: 'award',
-      color: 'bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400',
-      border: 'border-orange-200 dark:border-orange-800',
+      color: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
+      border: 'border-amber-200 dark:border-amber-800',
     },
     {
-      title: 'Excel Intermedio & Soporte Tecnico',
-      place: 'Universidad Tecnologica del Peru (UTP)',
+      title: 'Excel Intermedio & Soporte Técnico',
+      place: 'Universidad Tecnológica del Perú (UTP)',
       date: '2023',
       icon: 'wrench',
       color: 'bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400',
@@ -408,7 +522,7 @@ export class AboutPage {
     },
   ];
 
-  protected readonly levels: Level[] = ['Todos', 'Avanzado', 'Intermedio', 'Basico'];
+  protected readonly levels: Level[] = ['Todos', 'Avanzado', 'Intermedio', 'Básico'];
   protected selectedLevel: Level = 'Todos';
 
   private readonly skillConfiguration: Record<string, Exclude<Level, 'Todos'>> = {
@@ -429,9 +543,9 @@ export class AboutPage {
     postgres: 'Intermedio',
     mongodb: 'Intermedio',
     supabase: 'Intermedio',
-    java: 'Basico',
-    spring: 'Basico',
-    docker: 'Basico',
+    java: 'Básico',
+    spring: 'Básico',
+    docker: 'Básico',
   };
 
   protected readonly allTechnologies = Object.keys(this.skillConfiguration).sort();
