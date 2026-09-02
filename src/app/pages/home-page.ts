@@ -34,7 +34,8 @@ type SocialButton = {
               <img
                 src="/assets/perfil.jpg"
                 alt="Carlos Alzamora"
-                class="size-full object-cover transition-transform duration-700 group-hover:scale-110"
+                fetchpriority="high"
+                class="size-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-90 contrast-125"
               />
             </div>
           </div>
@@ -67,17 +68,16 @@ type SocialButton = {
               <h2
                 class="animate-fade-up text-xl font-medium text-gray-600 delay-200 dark:text-gray-300 md:text-2xl"
               >
-                Ingeniero de Sistemas e Informática
+                Egresado de Ingeniería de Sistemas e Informática
               </h2>
             </div>
 
             <p
               class="animate-fade-up text-lg leading-relaxed text-gray-600 delay-300 dark:text-gray-400"
             >
-              Profesional proactivo y adaptable con experiencia en
-              <strong class="text-gray-800 dark:text-gray-200"> desarrollo web Full Stack </strong>
-              y soporte técnico. Me enfoco en la mejora continua y la resolución eficiente de
-              problemas, aportando soluciones seguras y de calidad en entornos colaborativos.
+              Entusiasta de la tecnología con bases sólidas en
+              <strong class="text-gray-800 dark:text-gray-200"> desarrollo web </strong>
+              y soporte técnico. Siempre dispuesto a aprender nuevas herramientas, adaptarme a los desafíos y aportar soluciones eficientes en entornos colaborativos, buscando crecer profesionalmente con cada nuevo proyecto.
             </p>
 
             <div class="w-full pt-4">

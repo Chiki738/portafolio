@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 type NavItem = {
   id: string;
   label: string;
-  icon: 'home' | 'user' | 'folder' | 'award' | 'github' | 'file';
+  icon: 'home' | 'user' | 'folder' | 'award' | 'github' | 'file' | 'briefcase';
   external: boolean;
 };
 
@@ -25,7 +25,7 @@ type NavItem = {
           <button
             type="button"
             class="group flex cursor-pointer select-none items-center gap-3"
-            (click)="handleNavigate(navItems[0])"
+            (click)="handleNavigate(internalLinks[0])"
           >
             <span
               class="relative size-10 overflow-hidden rounded-full shadow-md transition-transform duration-300 group-hover:scale-105"
@@ -40,7 +40,7 @@ type NavItem = {
           </button>
 
           <div class="hidden min-[996px]:flex items-center gap-1">
-            @for (item of navItems; track item.id) {
+            @for (item of internalLinks; track item.id) {
               <button
                 type="button"
                 class="group relative flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all duration-300"
@@ -77,6 +77,26 @@ type NavItem = {
                 }
               </button>
             }
+            
+            <!-- Separador -->
+            <div class="mx-2 h-6 w-px bg-gray-200 dark:bg-gray-700" aria-hidden="true"></div>
+
+            @for (item of socialLinks; track item.id) {
+              <button
+                type="button"
+                class="group flex cursor-pointer items-center justify-center rounded-full p-2.5 text-gray-500 transition-all duration-300 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
+                [title]="item.label"
+                [attr.aria-label]="item.label"
+                (click)="handleNavigate(item)"
+              >
+                <span class="transition-transform duration-300 group-hover:scale-110" aria-hidden="true">
+                  <ng-container
+                    [ngTemplateOutlet]="iconTemplate"
+                    [ngTemplateOutletContext]="{ icon: item.icon }"
+                  />
+                </span>
+              </button>
+            }
           </div>
 
           <button
@@ -104,7 +124,7 @@ type NavItem = {
             class="absolute left-0 right-0 top-16 border-t border-gray-100 bg-white/95 shadow-xl backdrop-blur-xl dark:border-gray-800 dark:bg-gray-900/95 min-[996px]:hidden"
           >
             <div class="space-y-2 p-4">
-              @for (item of navItems; track item.id) {
+              @for (item of internalLinks; track item.id) {
                 <button
                   type="button"
                   class="flex w-full cursor-pointer items-center gap-3 rounded-xl p-3 transition-all duration-200"
@@ -134,6 +154,24 @@ type NavItem = {
                   {{ item.label }}
                 </button>
               }
+              
+              <div class="my-2 border-t border-gray-100 dark:border-gray-800"></div>
+              
+              <div class="flex gap-2">
+                @for (item of socialLinks; track item.id) {
+                  <button
+                    type="button"
+                    class="flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-xl bg-gray-50 p-3 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:bg-gray-800/50 dark:text-gray-300 dark:hover:bg-gray-800"
+                    (click)="handleNavigate(item)"
+                  >
+                    <ng-container
+                      [ngTemplateOutlet]="iconTemplate"
+                      [ngTemplateOutletContext]="{ icon: item.icon }"
+                    />
+                    {{ item.label }}
+                  </button>
+                }
+              </div>
             </div>
           </div>
         }
@@ -260,6 +298,21 @@ type NavItem = {
             <path d="M8 17h5" />
           </svg>
         }
+        @case ('briefcase') {
+          <svg
+            class="size-4.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          </svg>
+        }
       }
     </ng-template>
   `,
@@ -270,11 +323,16 @@ export class NavigationComponent {
 
   protected isVisible = true;
   protected isMobileMenuOpen = false;
-  protected readonly navItems: NavItem[] = [
+  
+  protected readonly internalLinks: NavItem[] = [
     { id: '/', label: 'Inicio', icon: 'home', external: false },
     { id: '/sobreMi', label: 'Sobre mí', icon: 'user', external: false },
+    { id: '/experiencia', label: 'Experiencia', icon: 'briefcase', external: false },
     { id: '/proyectos', label: 'Proyectos', icon: 'folder', external: false },
     { id: '/certificados', label: 'Certificados', icon: 'award', external: false },
+  ];
+
+  protected readonly socialLinks: NavItem[] = [
     { id: 'https://github.com/Chiki738', label: 'GitHub', icon: 'github', external: true },
     {
       id: 'https://drive.google.com/file/d/1qLanXs509m3tyKxxHEIIDXDgvWtGZSb0/view?usp=sharing',

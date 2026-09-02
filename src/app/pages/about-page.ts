@@ -62,10 +62,7 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Básico';
             <p
               class="text-center text-lg font-medium leading-relaxed text-gray-700 dark:text-gray-300"
             >
-              Profesional proactivo y adaptable del área de Ingeniería de Sistemas e Informática,
-              con experiencia en proyectos de desarrollo web y soporte técnico. Me enfoco en la
-              mejora continua, la organización y la resolución eficiente de problemas, aportando
-              soluciones seguras en entornos colaborativos.
+              Soy egresado de Ingeniería de Sistemas e Informática con bases sólidas en desarrollo web y soporte técnico. Me considero un profesional proactivo, siempre dispuesto a aprender nuevas tecnologías y a colaborar en equipo para encontrar soluciones eficientes y seguras. Busco seguir creciendo y aportando valor en cada proyecto.
             </p>
           </div>
         </div>
@@ -180,6 +177,7 @@ type Level = 'Todos' | 'Avanzado' | 'Intermedio' | 'Básico';
                         <img
                           [src]="generateIconUrl(tech)"
                           [alt]="tech"
+                          loading="lazy"
                           class="relative z-10 size-12 drop-shadow-sm transition-all group-hover/icon:drop-shadow-xl md:size-16"
                         />
                       </div>
@@ -497,9 +495,9 @@ export class AboutPage {
 
   protected readonly education: EducationItem[] = [
     {
-      title: 'Ingeniería de Sistemas e Informática',
+      title: 'Egresado de Ingeniería de Sistemas e Informática',
       place: 'Universidad Tecnológica del Perú (UTP)',
-      date: '2021 - Actualidad (10 ciclo)',
+      date: '2025 - II',
       icon: 'graduation',
       color: 'bg-teal-50 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300',
       border: 'border-teal-100 dark:border-teal-800',

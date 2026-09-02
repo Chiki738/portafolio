@@ -27,6 +27,14 @@ export const routes: Routes = [
     },
   },
   {
+    path: 'experiencia',
+    loadComponent: () => import('./pages/experience-page').then((page) => page.ExperiencePage),
+    title: 'Experiencia | Chiki',
+    data: {
+      description: 'Experiencia laboral y proyectos destacados de Carlos Alzamora.',
+    },
+  },
+  {
     path: 'certificados',
     loadComponent: () => import('./pages/certificates-page').then((page) => page.CertificatesPage),
     title: 'Certificados | Chiki',
