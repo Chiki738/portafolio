@@ -209,7 +209,7 @@ export class HomePage {
     {
       name: 'Mi CV',
       icon: 'file',
-      url: 'https://drive.google.com/file/d/1PjvKJRrzq0GJrM2c7pLGxUgkA1X_RCFv/view?usp=sharing',
+      url: 'https://drive.google.com/file/d/1RFtxTqdBvyiiYI5G8RRRQxDI2xYeot5l/view?usp=sharing',
       color: 'bg-amber-300 hover:bg-amber-400',
       textColor: 'text-gray-900',
     },

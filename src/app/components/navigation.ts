@@ -335,7 +335,7 @@ export class NavigationComponent {
   protected readonly socialLinks: NavItem[] = [
     { id: 'https://github.com/Chiki738', label: 'GitHub', icon: 'github', external: true },
     {
-      id: 'https://drive.google.com/file/d/1qLanXs509m3tyKxxHEIIDXDgvWtGZSb0/view?usp=sharing',
+      id: 'https://drive.google.com/file/d/1RFtxTqdBvyiiYI5G8RRRQxDI2xYeot5l/view?usp=sharing',
       label: 'Mi CV',
       icon: 'file',
       external: true,
