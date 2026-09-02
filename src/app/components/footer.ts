@@ -177,7 +177,7 @@ export class FooterComponent {
     {
       name: 'LinkedIn',
       icon: 'linkedin',
-      url: 'https://www.linkedin.com/in/carlos-alzamora-chiki/',
+      url: 'https://linkedin.com/in/calzamora',
       colorClass: 'hover:text-blue-400 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]',
     },
     {

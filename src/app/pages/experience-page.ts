@@ -64,7 +64,7 @@ import { Component } from '@angular/core';
                       [ngTemplateOutlet]="iconTemplate"
                       [ngTemplateOutletContext]="{ icon: 'calendar', size: 'size-4' }"
                     />
-                    2 de Marzo del 2026 - Actualidad
+                    Marzo del 2026 - Actualidad
                   </div>
                 </div>
 

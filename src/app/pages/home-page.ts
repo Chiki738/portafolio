@@ -195,14 +195,14 @@ export class HomePage {
     {
       name: 'LinkedIn',
       icon: 'linkedin',
-      url: 'https://www.linkedin.com/in/carlos-alzamora-chiki/',
+      url: 'https://linkedin.com/in/calzamora',
       color: 'bg-blue-600 hover:bg-blue-700',
       textColor: 'text-white',
     },
     {
       name: 'WhatsApp',
       icon: 'message',
-      url: 'https://wa.me/51956299119?text=Hola%20Carlos,%20vi%20tu%20portafolio%20y%20quisiera%20contactarte.',
+      url: 'https://wa.me/cdalza',
       color: 'bg-green-500 hover:bg-green-600',
       textColor: 'text-white',
     },
